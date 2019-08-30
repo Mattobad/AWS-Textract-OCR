@@ -58,7 +58,7 @@ def Remove(duplicate):
 	return final_list
 
 
-# AWS textract being from here
+# AWS textract begin from here
 response =textract.analyze_document(
 	Document={
 		'S3Object': {

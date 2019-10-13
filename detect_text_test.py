@@ -53,7 +53,7 @@ s3 = boto3.resource('s3')
 response =textract.analyze_document(
     Document={
         'S3Object': {
-            'Bucket':'test-textract-demo92',
+            'Bucket':'your_bucket_name',
             'Name':str(sys.argv[1])
         }
     },

@@ -37,7 +37,7 @@ file_name = str(sys.argv[1])
 response =textract.analyze_document(
 	Document={
 		'S3Object': {
-			'Bucket':'test-textract-demo92',
+			'Bucket':'your_bucket_name',
 			#'Name':str(sys.argv[1])
 			'Name' : file_name
 		}
@@ -62,7 +62,7 @@ for page in doc.pages:
 
 			#print(item,'\t',end=' ')
 	#forms = outputForm(page)
-s3.Object('test-textract-demo92',file_name+'.txt').put(Body=content)
+s3.Object('your_bucket_name',file_name+'.txt').put(Body=content)
 
 
 

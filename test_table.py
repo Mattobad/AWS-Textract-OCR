@@ -62,7 +62,7 @@ def Remove(duplicate):
 response =textract.analyze_document(
 	Document={
 		'S3Object': {
-			'Bucket':'test-textract-demo92',
+			'Bucket':'your_bucket_name',
 			'Name':str(sys.argv[1])
 		}
 	},
@@ -123,7 +123,9 @@ for line in line_content:
 
 
 final_line_list = Remove(line_content)
-final_line_list.remove("table")
+for item in final_line_list:
+	if "table" in item:
+		final_line_list.remove("table")
 
 print(line_content)
 print('')

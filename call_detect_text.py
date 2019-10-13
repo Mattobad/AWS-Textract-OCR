@@ -16,7 +16,7 @@ try:
 	response =textract.detect_document_text(
 		Document={
 			'S3Object': {
-				'Bucket':'test-textract-demo92',
+				'Bucket':'your_bucket_name',
 				'Name':str(sys.argv[1])
 			}
 		}
